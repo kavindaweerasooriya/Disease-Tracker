@@ -1,2 +1,2 @@
 # disease Tracker
- disease diagnosis system using ML algorithms
+ Disease diagnosis system using ML algorithms
