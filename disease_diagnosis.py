@@ -1,7 +1,5 @@
 from sklearn.cluster import KMeans
 import numpy as np
-from diseases import diseases
-from all_symptoms import all_symptoms
 
 
 num_symptoms = int(input("How many symptoms do you have? "))
@@ -10,7 +8,7 @@ for i in range(num_symptoms):
     symptom = input(f"Enter symptom #{i+1}: ")
     user_symptoms.append(symptom)
 
-# all_symptoms = ['Fever', 'Headache', 'Nausea', 'Fatigue', 'Cough', 'Sore throat', 'Shortness of breath', 'Muscle aches', 'Loss of taste or smell']
+all_symptoms = ['Fever', 'Headache', 'Nausea', 'Fatigue', 'Cough', 'Sore throat', 'Shortness of breath', 'Muscle aches', 'Loss of taste or smell']
 
 user_data = np.zeros(len(all_symptoms))
 for symptom in user_symptoms:
@@ -18,16 +16,16 @@ for symptom in user_symptoms:
         user_data[all_symptoms.index(symptom)] = 1
 
 
-# diseases = {
-#     "Common cold": [1, 1, 0, 1, 1, 1, 0, 0, 0],
-#     "Influenza": [1, 1, 1, 1, 0, 1, 1, 1, 0],
-#     "COVID-19": [1, 1, 1, 1, 1, 1, 1, 1, 1],
-#     "Pneumonia": [1, 1, 1, 1, 1, 1, 1, 1, 1],
-#     "Bronchitis": [1, 1, 1, 1, 1, 0, 1, 1, 0],
-#     "Sinusitis": [1, 1, 1, 1, 0, 1, 0, 0, 0],
-#     "Strep throat": [1, 1, 1, 1, 1, 1, 0, 0, 0],
-#     "Tonsillitis": [1, 1, 1, 1, 1, 1, 0, 0, 0]
-# }
+diseases = {
+    "Common cold": [1, 1, 0, 1, 1, 1, 0, 0, 0],
+    "Influenza": [1, 1, 1, 1, 0, 1, 1, 1, 0],
+    "COVID-19": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "Pneumonia": [1, 1, 1, 1, 1, 1, 1, 1, 1],
+    "Bronchitis": [1, 1, 1, 1, 1, 0, 1, 1, 0],
+    "Sinusitis": [1, 1, 1, 1, 0, 1, 0, 0, 0],
+    "Strep throat": [1, 1, 1, 1, 1, 1, 0, 0, 0],
+    "Tonsillitis": [1, 1, 1, 1, 1, 1, 0, 0, 0]
+}
 
 
 
