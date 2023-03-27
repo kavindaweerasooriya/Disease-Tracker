@@ -2,8 +2,8 @@ import requests
 from sklearn.cluster import KMeans
 import numpy as np
 
-APP_ID = 'ed13792a'
-APP_KEY = 'e68ed663877f13c9307fea58c25781c4'
+APP_ID = ''
+APP_KEY = ''
 
 def get_symptoms():
     url = 'https://api.infermedica.com/v3/symptoms'
